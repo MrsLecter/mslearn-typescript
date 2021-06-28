@@ -44,14 +44,14 @@ console.log(a);
    you can pass in the season by referencing an item in the enum, for example 
    Season.Fall, instead of the literal string "Fall". */
 
-   enum Season {
+enum Season {
     Winter,
     Spring,
     Summer,
     Fall
 };
 
-function whichMonths(season: Season) {
+function whichMonths(season: Season): string{
     let monthsInSeason: string;
     switch (season) {
         case Season.Fall:
@@ -73,14 +73,12 @@ console.log(whichMonths(Season.Spring));
 
 /* EXERCISE 4
    TODO: Declare the array as the type to match the type of the items in the array. */
-
-let randomNumbers: number[] = [];
-let nextNumber: number;
-
-for (let i = 0; i < 10; i++) {
-    nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
-    randomNumbers.push(nextNumber);
-}
-
-console.log(randomNumbers);
-   
+   let randomNumbers: Array<number> = [];
+   let nextNumber: number;
+      
+   for (let i = 0; i < 10; i++) {
+     nextNumber = Math.floor(Math.random() * (100 - 1)) + 1;
+     randomNumbers.push(nextNumber);
+   }
+      
+   console.log(randomNumbers);
